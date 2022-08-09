@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "<NAME>",
+  "version": "1.0.0",
+  "description": "<DESCRIPTION>",
+  "icons": {},
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/js/content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/js/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "author": "<AUTHOR>",
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
