@@ -25,6 +25,13 @@
       ]
     }
   ],
+  "commands": {
+    "picker": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+~"
+      }
+    }
+  },
   "author": "Pickr",
   "permissions": [
     "tabs",
