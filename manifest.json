@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "<NAME>",
+  "name": "Pickr",
   "version": "1.0.0",
-  "description": "<DESCRIPTION>",
+  "description": "Color picker",
   "icons": {},
   "content_scripts": [
     {
@@ -25,7 +25,7 @@
       ]
     }
   ],
-  "author": "<AUTHOR>",
+  "author": "Pickr",
   "permissions": [
     "tabs",
     "storage"

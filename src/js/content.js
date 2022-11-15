@@ -6,3 +6,4 @@ const script = document.createElement('script');
 script.setAttribute('type', 'module');
 script.setAttribute('src', chrome.runtime.getURL('src/js/main.js'));
 document.documentElement.append(script);
+
