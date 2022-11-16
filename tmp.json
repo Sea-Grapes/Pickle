@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "Color picker",
   "icons": {},
-
   "content_scripts": [
     {
       "run_at": "document_start",
@@ -16,7 +15,6 @@
       ]
     }
   ],
-
   "web_accessible_resources": [
     {
       "resources": [
@@ -27,13 +25,11 @@
       ]
     }
   ],
-  "background": {
-    "service_worker": "src/js/background.js"
-  },
   "commands": {
     "picker": {
-      "suggested_key": "Ctrl+Shift+Q",
-      "description": "Color picker"
+      "suggested_key": {
+        "default": "Ctrl+Shift+~"
+      }
     }
   },
   "author": "Pickr",
