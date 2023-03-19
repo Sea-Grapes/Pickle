@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "popup\\.vscode": true,
+    ".vscode": true,
+    "popup/.gitignore": true,
+    "popup/.vscode": true,
+    "popup/node_modules": true,
+    "popup/package-lock.json": true,
+    "popup/package.json": true,
+    "popup\\src\\vite-env.d.ts": true
+  }
+}
