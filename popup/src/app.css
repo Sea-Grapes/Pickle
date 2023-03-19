@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+  width: 300px;
+  height: 200px;
+  margin: 0;
+}
