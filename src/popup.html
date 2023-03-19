@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      html, body {
-        width: 300px;
-        height: 200px;
-        margin: 0;
-        padding: 8px;
-      }
+<head>
+<style> 
 
-      * {
-        box-sizing: border-box;
-      }
+:root {
+  --slate50: #f8fafc;
+  --slate100: #f1f5f9;
+  --slate200: #e2e8f0;
+  --slate300: #cbd5e1;
+  --slate400: #94a3b8;
+  --slate600: #475569;
+  --slate700: #334155;
+  --slate800: #1e293b;
+}
 
-      .ns {
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+body {
+  width: 300px;
+  height: 200px;
+  margin: 0;
+  background-color: var(--slate50);
+}
 
-      h1 {
-        font-weight: 200;
-        margin: 0;
-        /* font-size: em; */
-      }
+* {
+  box-sizing: border-box;
+}
 
-      p {
-        font-size: 1.12em;
-      }
-    </style>
-  </head>
-  <body class="ns">
-    <h1>Pickle</h1>
-    <p>A color picker extension</p>
-  </body>
+.ns {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-weight: 200;
+  margin: 0;
+}
+
+p {
+  font-size: 1.12em;
+  margin: 0;
+}
+
+.nav {
+ background-color: var(--slate200);
+ /* padding-top: 4px */
+ padding: 5px 5px 0 5px;
+ /* padding: 4px 5px; */
+}
+
+.nav > button {
+  padding: 6px 10px;
+  font-size: 1.2em;
+  background-color: #fff0;
+  transition: 0.2s;
+  border-radius: 5px 5px 0 0;
+  color: var(--slate600)
+}
+
+/* .nav > button:not(.active) {
+  border-right: 1px solid var(--slate300);
+} */
+
+.nav > button:not(.active):hover {
+  background-color: #ebf0f5;
+}
+
+.nav > .active {
+  background-color: var(--slate50) !important;
+}
+
+button {
+  /* background-color: #fff0; */
+  border: none;
+  padding: 0;
+}
+
+</style>
+</head>
+<body class="ns">
+  <div class="nav">
+    <button class="active">Color picker</button>
+    <button>History</button>
+    <button>Settings</button>
+  </div>
+
+  <div class="tabs">
+    
+  </div>
+
+  <script src="./popup.js"></script>
+</body>
 </html>
