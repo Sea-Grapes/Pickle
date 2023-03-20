@@ -20,33 +20,34 @@ const tabs = new class {
     this.currentTab = 2;
     this.buttons.forEach((button, i) => {
       button.addEventListener('click', e => {
-        this.clear()
-        this.activate(i)
+        this.currentTab = i
       })
+      button.setAttribute('tabindex', '-1')
     })
 
-    this.activate(this.currentTab)
+    addEventListener('keydown', e => {
+      if(e.key == 'Tab') this.currentTab += e.shiftKey ? -1 : 1
+    })
+
+    const [picker, history, settings] = this.tabs
+    const options = settings.querySelectorAll('input[type=checkbox]')
+    options.forEach(check => check.addEventListener('change', e => {
+      console.log(check)
+    }))
   }
 
-  activate(id) {
-    this.buttons[id].classList += 'active'
-    this.tabs[id].style.display = 'block'
-  }
+  #current;
+  set currentTab(id) {
+    this.#current = (id > this.tabs.length - 1) ? 0 : (id < 0) ? this.tabs.length - 1 : id
 
-  clear() {
     this.buttons.forEach(button => button.classList = '')
     this.tabs.forEach(tab => tab.style.display = 'none')
+    
+    this.buttons[this.currentTab].classList += 'active'
+    this.tabs[this.currentTab].style.display = 'block'
   }
 
-  tabForward() {
-    let next = this.currentTab + 1
-    if(next > this.tabs.length) this
-    // this.activate(())
+  get currentTab() {
+    return this.#current
   }
 }
-
-addEventListener('keydown', e => {
-  if(e.ctrlKey && e.key == 'Tab') {
-    // this.activate()
-  }
-})
