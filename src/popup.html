@@ -37,7 +37,7 @@ h1 {
 }
 
 p {
-  font-size: 1.12em;
+  font-size: 1.2em;
   margin: 0;
 }
 
@@ -75,17 +75,40 @@ button {
   padding: 0;
 }
 
+.tabs {
+  margin: 10px 14px;
+}
+
+.tabs > div {
+  display: none;
+  animation: fadeIn 1s;
+  /* padding: 10px; */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
 </style>
 </head>
 <body class="ns">
   <div class="nav">
-    <button class="active">Color picker</button>
+    <button>Color picker</button>
     <button>History</button>
     <button>Settings</button>
   </div>
 
   <div class="tabs">
-    
+    <div>
+      page1
+    </div>
+    <div>
+      page2
+    </div>
+    <div>
+      Picker Enabled
+    </div>
   </div>
 
   <script src="./popup.js"></script>
