@@ -24,7 +24,7 @@ const tabs = new class {
       })
     })
 
-    this.activate(0)
+    this.activate(2)
   }
 
   activate(id) {
